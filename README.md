@@ -1,25 +1,68 @@
-Student Grade Manager
-A simple console-based Python project for managing students and their grades. This project is designed for learning and practicing core Python concepts such as functions, classes, file handling, and basic data persistence using JSON.
-Features
-Add new students
-Delete existing students
-Add grades to a student
-Remove a specific grade from a student
-Calculate student average grades dynamically
-Save and load data using a JSON file
-Project Structure
-student_grade_manager/ ├── main.py ├── README.md ├── src/ │ ├── student.py │ └── storage.py 
-File Description
-main.py
-Entry point of the program. Handles user interaction and menu logic.
-src/student.py
-Contains the Student class. Responsible for student data, grade operations, and average calculation.
-src/storage.py
-Handles loading and saving student data to a JSON file.
-How It Works
-Student data is stored in memory as a dictionary: { "student_name": Student_object } 
-Data is persisted in a students.json file.
-The average grade is calculated dynamically and is never stored directly.
-Requirements
-Python 3.8 or higher
-No external libraries required
+# Student Grade Manager
+
+A simple Python console-based application for managing student records and their scores.
+The project uses a modular structure, basic object-oriented design, and JSON file storage
+to persist data between runs.
+
+## Features
+
+- Add and delete students
+- Add and remove scores for each student
+- Calculate average score dynamically
+- View all students and their scores
+- Input validation for names and scores
+- Persistent storage using a JSON file
+- Clear separation of logic and data handling
+
+## Project Structure
+
+student_grade_manager/ │ ├─ main.py               # Application entry point and menu logic ├─ README.md             # Project documentation └─ src/ ├─ student.py         # Student class and related logic └─ storage.py         # Load/save data from JSON file
+
+## How to Run
+
+1. Clone the repository:
+   `bash
+   git clone https://github.com/your-username/student_grade_manager.git
+
+2. Navigate to the project directory:
+
+cd student_grade_manager
+
+
+3. Run the program:
+
+python main.py
+
+
+
+Data Storage
+
+All student data is automatically saved in a JSON file. Changes such as adding or removing students or scores are persisted between runs.
+
+Design Notes
+
+The Student class represents the data model.
+
+The average score is calculated dynamically and is not stored.
+
+File handling logic is separated from business logic.
+
+No external libraries are used.
+
+
+Future Improvements
+
+Add unit tests
+
+Add sorting and filtering options
+
+Replace JSON storage with a database
+
+Build a simple GUI or web interface
+
+
+License
+
+This project is licensed under the MIT License.
+
+---
